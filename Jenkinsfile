@@ -3,11 +3,6 @@ pipeline {
     label 'docker-ubuntu'
   }
   stages {
-    stage('clone repo') {
-      steps {
-        git 'https://github.com/car-roll/dockertest.git' 
-      } 
-    }
     stage('build image') {
       steps {
         sh 'docker build -t "basic:1.0" .' 
